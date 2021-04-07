@@ -6,7 +6,6 @@ function numberFormat(price) {
     return currency.format(price)
 }
 
-
 function ArrivedItem({ item }) {
   return (
     <div className="px-4 relative card group">
