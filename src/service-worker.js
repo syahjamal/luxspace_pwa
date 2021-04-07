@@ -60,6 +60,18 @@ registerRoute(
     })
 );
 
+registerRoute(
+  ({url}) => url.origin.includes("qorebase.io"), new NetworkFirst({
+    cacheName : 'apidata',
+    plugins:[
+      new ExpirationPlugin({
+        maxAgeSeconds: 360,
+        maxEntries: 30
+      })
+    ]
+  })
+);
+
 self.addEventListener("install", function (event) {
   console.log("Sw Install");
 });

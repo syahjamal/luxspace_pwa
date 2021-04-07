@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -54,6 +54,7 @@
   .hero .hero-caption {
     min-height: 90vh;
   }
+
   .hero .hero-cta {
     @apply w-12 h-12;
     transform: translateX(-75px) translateY(-50%);
@@ -115,9 +116,11 @@ ul.breadcrumb li:last-child a {
   .slider {
     @apply flex-row;
   }
+
   .slider .thumbnail {
     @apply w-auto order-first block overflow-visible pl-0;
   }
+
   .slider .preview {
     height: 600px;
     width: 560px;
