@@ -1,4 +1,6 @@
 import React from "react";
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+
 import AsideMenu from "./components/AsideMenu";
 import Browse from "./components/Browse";
 import Client from "./components/Client";
@@ -7,6 +9,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import JustArrive from "./components/JustArrive";
 import Offline from "./components/Offline.js";
+import Profile from "./pages/Profile";
 import Splash from "./pages/Splash";
 
 function App() {
@@ -76,4 +79,11 @@ function App() {
   );
 }
 
-export default App;
+export default function Routes() {
+  return (
+    <Router>
+      <Route path="/" exact component={App}/>
+      <Route path="/profile" exact component={Profile}/>
+    </Router>
+  )
+};
